@@ -57,7 +57,6 @@ public class TsrHttpUtil {
         if (reqBuilder.getContentType() != null) {
             headerMap.put("Content-Type", reqBuilder.getContentType());
             headerMap.put("Accept", reqBuilder.getContentType());
-            headerMap.put("tversion","trade");
         }
         Map<String, String> reqHeaders = reqBuilder.getHeaders();
         if (reqHeaders != null && reqHeaders.size() > 0) {
