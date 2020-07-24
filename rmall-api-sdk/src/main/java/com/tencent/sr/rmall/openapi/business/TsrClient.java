@@ -12,7 +12,7 @@ import com.tencent.sr.rmall.openapi.utils.SignUtils;
 public class TsrClient {
 
     private static Credential cred = null;
-    private static String endPoint = "https://service-nd6264p0-1300977798.gz.apigw.tencentcs.com";
+    private static String endPoint = "https://oapi.vshop.qq.com";
 
 
     public static void init(Credential cred) throws TsrSdkException {
