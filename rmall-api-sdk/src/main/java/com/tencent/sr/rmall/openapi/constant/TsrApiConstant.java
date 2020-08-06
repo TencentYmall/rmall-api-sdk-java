@@ -2,7 +2,6 @@ package com.tencent.sr.rmall.openapi.constant;
 
 /**
  * @author effortjiang
- * @date 2020-07-15
  */
 
 public class TsrApiConstant {

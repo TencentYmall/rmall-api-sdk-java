@@ -9,7 +9,6 @@ import java.util.Map;
 
 /**
  * @author effortjiang
- * @date 2020-07-13
  */
 
 public class HttpResponseResult implements Serializable {

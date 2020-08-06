@@ -7,7 +7,6 @@ import lombok.Data;
 /**
  * 开放平台发票信息
  * @author Z_RT
- * @date 2020年4月29日
  */
 @Data
 @ApiModel(description = "开放平台发票信息")

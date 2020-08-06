@@ -21,7 +21,6 @@ import com.tencent.sr.rmall.openapi.constant.TsrApiConstant;
 
 /**
  * @author effortjiang
- * @date 2020-07-15
  */
 
 public class Credential {

@@ -8,7 +8,6 @@ import java.lang.reflect.Type;
 
 /**
  * @author effortjiang
- * @date 2020-07-13
  */
 
 public class HttpJsonUtils {

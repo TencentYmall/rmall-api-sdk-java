@@ -4,7 +4,6 @@ import com.tencent.sr.rmall.openapi.exception.TsrSdkException;
 
 /**
  * @author effortjiang
- * @date 2020-07-15
  */
 
 public class TsrExceptionUtil {

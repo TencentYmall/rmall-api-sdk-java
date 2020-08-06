@@ -15,7 +15,6 @@ import java.util.List;
  * 开放平台历史订单返回对象
  *
  * @author Z_RT
- * @date 2020年4月29日
  */
 @Data
 @ApiModel(description = "开放平台历史订单信息")
@@ -51,7 +50,6 @@ public class OpenApiHistoryOrderListResponse extends BaseApiResponse implements 
      * 开放平台历史订单详情
      *
      * @author Z_RT
-     * @date 2020年3月5日
      */
     @Data
     @ApiModel(description = "开放平台历史订单详情基础信息")

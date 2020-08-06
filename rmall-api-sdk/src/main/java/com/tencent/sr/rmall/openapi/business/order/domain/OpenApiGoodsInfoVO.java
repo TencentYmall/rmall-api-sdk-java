@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * 开放平台商品信息
  * @author T_ZL
- * @date 2020年2月27日
  */
 @Data
 @ApiModel(description = "开放平台订单商品条目")
@@ -40,7 +39,6 @@ public class OpenApiGoodsInfoVO {
      * 规格属性
      *
      * @author T_ZL
-     * @date 2020年3月20日
      */
     @Data
     @ApiModel(description = "商品规格")

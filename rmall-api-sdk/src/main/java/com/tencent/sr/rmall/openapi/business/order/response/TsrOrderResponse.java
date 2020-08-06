@@ -14,7 +14,6 @@ import java.util.List;
 
 /**
  * @author effortjiang
- * @date 2020-07-15
  */
 @Data
 public class TsrOrderResponse extends BaseApiResponse {
