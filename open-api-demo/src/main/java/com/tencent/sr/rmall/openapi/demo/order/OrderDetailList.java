@@ -6,6 +6,7 @@ import com.tencent.sr.rmall.openapi.business.order.TsrOrderClient;
 import com.tencent.sr.rmall.openapi.business.order.request.OpenApiSearchOrderListRequest;
 import com.tencent.sr.rmall.openapi.business.order.response.OpenApiHistoryOrderListResponse;
 import com.tencent.sr.rmall.openapi.business.order.response.OpenApiOrderListResponse;
+import com.tencent.sr.rmall.openapi.demo.InitUtil;
 import com.tencent.sr.rmall.openapi.exception.TsrSdkException;
 import com.tencent.sr.rmall.openapi.http.HttpResult;
 import com.tencent.sr.rmall.openapi.secure.Credential;
@@ -13,13 +14,13 @@ import com.tencent.sr.rmall.openapi.secure.Credential;
 public class OrderDetailList {
 
     public static void main(String[] args) throws TsrSdkException {
-        initSecret();
+        InitUtil.initSecret();
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrOrderClient orderClient = new TsrOrderClient();
-        //联调环境需要加上这个,路由到泳道
-        orderClient.addHeader("tversion","trade");
-
+        //可根据需要设置客户端超时时间,默认连接3秒
+        orderClient.setConnectionTimeout(3000);
+        orderClient.setReadTimeout(3000);
         //查询全量
         OpenApiSearchOrderListRequest request =  getOrderAll();
 
@@ -31,11 +32,11 @@ public class OrderDetailList {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setCreateTimeInterval(new Long[]{1591943220000L,1591943220001L});
+        parameter.setCreateTimeInterval(new Long[]{1592709246000L,1592709358000L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
-        request.setSaasId(70000001);
-        request.setUid("700000011054154");
+//        request.setSaasId(70000001);
+//        request.setUid("700000011052408");
 
 
         request.setParameter(parameter);
@@ -43,12 +44,12 @@ public class OrderDetailList {
     }
 
 
-    private static void initSecret() throws TsrSdkException {
-        //全局初始化密钥  如果应用密钥唯一 初始化一次即可
-        //q享qa环境密钥demo
-        String secretId = "AKIDNxcOd6uuqlce25ajKLlb73k0582nfWPlSok5";
-        String secretKey = "E80EWIYrJogWkjK6az0bKGk1YXS1x4hNulMrt3rn";
-        Credential credential = new Credential(secretId, secretKey);
-        TsrClient.init(credential);
-    }
+//    private static void initSecret() throws TsrSdkException {
+//        //全局初始化密钥  如果应用密钥唯一 初始化一次即可
+//        //q享qa环境密钥demo
+//        String secretId = "AKIDNxcOd6uuqlce25ajKLlb73k0582nfWPlSok5";
+//        String secretKey = "E80EWIYrJogWkjK6az0bKGk1YXS1x4hNulMrt3rn";
+//        Credential credential = new Credential(secretId, secretKey);
+//        TsrClient.init(credential);
+//    }
 }

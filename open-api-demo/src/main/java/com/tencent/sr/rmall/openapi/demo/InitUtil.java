@@ -12,13 +12,23 @@ import com.tencent.sr.rmall.openapi.secure.Credential;
 public class InitUtil {
 
 
+    public static void initSecret(String url) throws TsrSdkException {
+        Credential credential = inint();
+        TsrClient.init(credential, url);
+    }
+
     public static void initSecret() throws TsrSdkException {
+        Credential credential = inint();
+        TsrClient.init(credential);
+    }
+
+    public static Credential inint() {
         //全局初始化密钥  如果应用密钥唯一 初始化一次即可
         //q享qa环境密钥demo
-        String secretId = "";
-        String secretKey = "";
+        String secretId = "AKIDE1MuydexoIx0FDPlxtAdNxyl5bQOQ28gp9kt";
+        String secretKey = "HqTmCNg9X85DRYJIplyvb7NKaxObLqbLk1QG50gt";
         Credential credential = new Credential(secretId, secretKey);
-        TsrClient.init(credential);
+        return credential;
     }
 
 
