@@ -3,6 +3,7 @@ package com.tencent.sr.rmall.openapi.business;
 import com.tencent.sr.rmall.openapi.exception.TsrSdkException;
 import com.tencent.sr.rmall.openapi.secure.Credential;
 import com.tencent.sr.rmall.openapi.utils.SignUtils;
+import com.tencent.sr.rmall.openapi.utils.StringUtils;
 
 /**
  * @author effortjiang
@@ -13,6 +14,8 @@ public class TsrClient {
 
     private static Credential cred = null;
     private static String endPoint = "https://oapi.vshop.qq.com";
+    private static String qa = "https://oapi-qa.vshop.qq.com";
+    private static final String QA = "qa";
 
 
     public static void init(Credential cred) throws TsrSdkException {
@@ -23,7 +26,10 @@ public class TsrClient {
     public static void init(Credential cred, String endPoint) throws TsrSdkException {
         SignUtils.validCredential(cred);
         TsrClient.cred = cred;
-        TsrClient.endPoint = endPoint;
+        if (StringUtils.isNotBlank(endPoint) && QA.equals(endPoint)) {
+            TsrClient.endPoint = qa;
+        }
+
     }
 
 
