@@ -34,6 +34,10 @@ public class OpenApiGoodsInfoVO {
     private Long actualPrice;
     @ApiModelProperty(value = "商品优惠总金额", required = true)
     private Long itemDiscountAmount;
+    @ApiModelProperty(value = "商品编码",required = false)
+    private String externalSkuId;
+    @ApiModelProperty(value = "商品成本价",required = false)
+    private Long costPrice;
 
     /**
      * 规格属性
