@@ -14,7 +14,8 @@ import com.tencent.sr.rmall.openapi.secure.Credential;
 public class OrderDetailList {
 
     public static void main(String[] args) throws TsrSdkException {
-        InitUtil.initSecret();
+        //测试环境传qa标识,不传默认为online
+        InitUtil.initSecret("qa");
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrOrderClient orderClient = new TsrOrderClient();

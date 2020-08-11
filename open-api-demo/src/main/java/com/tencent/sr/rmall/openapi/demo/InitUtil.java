@@ -13,20 +13,20 @@ public class InitUtil {
 
 
     public static void initSecret(String url) throws TsrSdkException {
-        Credential credential = inint();
+        Credential credential = init();
         TsrClient.init(credential, url);
     }
 
     public static void initSecret() throws TsrSdkException {
-        Credential credential = inint();
+        Credential credential = init();
         TsrClient.init(credential);
     }
 
-    public static Credential inint() {
+    public static Credential init() {
         //全局初始化密钥  如果应用密钥唯一 初始化一次即可
         //q享qa环境密钥demo
-        String secretId = "AKIDE1MuydexoIx0FDPlxtAdNxyl5bQOQ28gp9kt";
-        String secretKey = "HqTmCNg9X85DRYJIplyvb7NKaxObLqbLk1QG50gt";
+        String secretId = "AKIDNxcOd6uuqlce25ajKLlb73k0582nfWPlSok5";
+        String secretKey = "E80EWIYrJogWkjK6az0bKGk1YXS1x4hNulMrt3rn";
         Credential credential = new Credential(secretId, secretKey);
         return credential;
     }
