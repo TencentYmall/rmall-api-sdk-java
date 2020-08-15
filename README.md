@@ -32,3 +32,7 @@
         System.out.println("请求链路id" + data.getRequestId());
 
 ```
+
+# 备注
+1. log日志级别为debug时,会组装每次请求数据为curl格式,并打印
+
