@@ -7,7 +7,7 @@
     <groupId>com.tencent.sr.rmall</groupId>
     <artifactId>open-api-sdk</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.RELEASE</version>
     <modules>
         <module>open-api-demo</module>
         <module>rmall-api-sdk</module>
