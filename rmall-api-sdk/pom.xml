@@ -6,10 +6,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tencent.sr.rmall</groupId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.0.2.1.RELEASE</version>
     <artifactId>rmall-api-sdk</artifactId>
 
-    <name>tencent rmall open api sdk</name>
+    <name>tencent-rmall-open-api-sdk</name>
     <description>tencent rmall open api sdk</description>
     <url>https://retail.cloud.tencent.com/</url>
     <packaging>jar</packaging>
