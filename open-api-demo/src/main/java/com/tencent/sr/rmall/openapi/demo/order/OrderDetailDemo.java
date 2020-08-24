@@ -7,6 +7,7 @@ package com.tencent.sr.rmall.openapi.demo.order;
  * @date 2020/7/17
  */
 
+import com.google.gson.JsonObject;
 import com.tencent.sr.rmall.openapi.business.order.TsrOrderClient;
 import com.tencent.sr.rmall.openapi.business.order.request.TsrOrderRequest;
 import com.tencent.sr.rmall.openapi.business.order.response.TsrOrderResponse;
@@ -36,7 +37,7 @@ public class OrderDetailDemo {
         TsrOrderRequest request = getTsrOrderRequest();
         //发起调用
         HttpResult<TsrOrderResponse> tsrOrderResponse = orderClient.queryOrder(request);
-        System.out.println(tsrOrderResponse);
+        System.out.println(tsrOrderResponse.getData());
         //获取结果
         System.out.println("请求结果id=" + tsrOrderResponse.getRequestId());
 
@@ -46,7 +47,7 @@ public class OrderDetailDemo {
     private static TsrOrderRequest getTsrOrderRequest() {
         TsrOrderRequest request = new TsrOrderRequest();
         TsrOrderRequest.ParameterBean parameterBean = new TsrOrderRequest.ParameterBean();
-        parameterBean.setOrderNo("217055260438588754");
+        parameterBean.setOrderNo("298670031782161203");
         request.setParameter(parameterBean);
         return request;
     }

@@ -74,6 +74,19 @@ public class TsrOrderClient extends BaseApiClient {
         return doRequest(orderRequest, OpenApiOrderListResponse.class);
     }
 
+
+    /**
+     * 查询增量订单
+     *
+     * @param orderRequest
+     * @return
+     * @throws TsrSdkException
+     */
+    @ApiMapping(url = "/api/v2/openapi/order/searchOrderList")
+    public HttpResult<OpenApiOrderListResponse> searchOrderV2List(OpenApiSearchOrderListRequest orderRequest) throws TsrSdkException {
+        return doRequest(orderRequest, OpenApiOrderListResponse.class);
+    }
+
     /**
      * 发货
      *

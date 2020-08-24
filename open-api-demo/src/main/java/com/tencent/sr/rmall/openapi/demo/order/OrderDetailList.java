@@ -33,7 +33,7 @@ public class OrderDetailList {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setCreateTimeInterval(new Long[]{1592709246000L,1592709358000L});
+        parameter.setCreateTimeInterval(new Long[]{1596633377000L,1596633377000L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
         request.setParameter(parameter);

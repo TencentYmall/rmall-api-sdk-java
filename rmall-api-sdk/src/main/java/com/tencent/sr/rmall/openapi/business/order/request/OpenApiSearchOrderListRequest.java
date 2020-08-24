@@ -12,7 +12,7 @@ public class OpenApiSearchOrderListRequest extends BaseApiRequest {
     private String uid;
 
     @Data
-    public static class Parameter{
+    public static class Parameter {
         /**
          * 当前页
          */
@@ -41,15 +41,20 @@ public class OpenApiSearchOrderListRequest extends BaseApiRequest {
         private Long storeId;
         /**
          * 时间区间
-         *   [beginTime, endTime]
+         * [beginTime, endTime]
          */
         @ApiModelProperty("时间区间:[beginTime, endTime]")
         private Long[] createTimeInterval;
 
+        /**
+         * 时间区间
+         * [beginTime, endTime]
+         */
+        @ApiModelProperty("时间区间:[beginTime, endTime]")
+        private Long[] operationTimeInterval;
+
 
     }
-
-
 
 
 }
