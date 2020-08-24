@@ -18,9 +18,6 @@ public class ReturnAgreeDemo {
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrRightClient orderClient = new TsrRightClient();
-        //联调环境需要加上这个,路由到泳道
-        //orderClient.addHeader("tversion", "rights-refund");
-
         //查询全量
         RightsReturnOpenApiRequest request = getRightReturnOpenApiRequest();
 
@@ -33,7 +30,6 @@ public class ReturnAgreeDemo {
     private static RightsReturnOpenApiRequest getRightReturnOpenApiRequest() {
         RightsReturnOpenApiRequest request = new RightsReturnOpenApiRequest();
         request.setRightsNo("288527782137434241");
-        request.setSaasId(70000001L);
         request.setReceiverAddress("广东深圳");
         request.setReceiverCity("深圳");
         request.setReceiverArea("南山区");

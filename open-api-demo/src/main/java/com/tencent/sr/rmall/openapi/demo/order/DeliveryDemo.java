@@ -35,7 +35,6 @@ public class DeliveryDemo {
         OpenApiFinishDeliveryRequest deliveryRequest = new OpenApiFinishDeliveryRequest();
         OpenApiFinishDeliveryRequest.DeliveryParameter parameter = new OpenApiFinishDeliveryRequest.DeliveryParameter();
         deliveryRequest.setParameter(parameter);
-        deliveryRequest.setSaasId(70000001);
         parameter.setIsBreak(false);
         parameter.setOrderNo("264115470218702393");
         OpenApiLogisticsInfoVO logisticsInfoVO = new OpenApiLogisticsInfoVO();

@@ -17,7 +17,6 @@ public class OrderAllDemo {
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrOrderClient orderClient = new TsrOrderClient();
-
         //查询全量
         OpenApiSearchOrderListRequest request1 = getOrderAll();
 
@@ -29,13 +28,9 @@ public class OrderAllDemo {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setCreateTimeInterval(new Long[]{1592709246000L, 1592709247000L});
+        parameter.setCreateTimeInterval(new Long[]{1597914000000L, 1597939199000L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
-//        request.setSaasId(0);
-        request.setUid("700000011052408");
-
-
         request.setParameter(parameter);
         return request;
     }

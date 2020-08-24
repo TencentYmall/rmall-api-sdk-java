@@ -36,10 +36,6 @@ public class OrderDetailList {
         parameter.setCreateTimeInterval(new Long[]{1592709246000L,1592709358000L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
-//        request.setSaasId(70000001);
-//        request.setUid("700000011052408");
-
-
         request.setParameter(parameter);
         return request;
     }

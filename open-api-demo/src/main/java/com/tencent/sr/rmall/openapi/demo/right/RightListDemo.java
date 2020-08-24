@@ -20,9 +20,6 @@ public class RightListDemo {
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrRightClient orderClient = new TsrRightClient();
-        //联调环境需要加上这个,路由到泳道
-        //orderClient.addHeader("tversion","rights-refund");
-
         //查询全量
         GetRightsListOpenApiRequest request = getRightListOpenApiRequest();
 

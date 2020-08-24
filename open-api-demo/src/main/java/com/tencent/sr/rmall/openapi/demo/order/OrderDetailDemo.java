@@ -46,10 +46,8 @@ public class OrderDetailDemo {
     private static TsrOrderRequest getTsrOrderRequest() {
         TsrOrderRequest request = new TsrOrderRequest();
         TsrOrderRequest.ParameterBean parameterBean = new TsrOrderRequest.ParameterBean();
-        parameterBean.setOrderNo("225959721559054608");
+        parameterBean.setOrderNo("217055260438588754");
         request.setParameter(parameterBean);
-//        request.setSaasId(70000001);
-        //request.setUid("700000011070026");
         return request;
     }
 

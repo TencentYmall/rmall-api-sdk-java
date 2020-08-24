@@ -28,8 +28,6 @@ public class RightRefundRejectDemo {
         //订单sdk客户端  可以对客户端再做个性化处理
         //例如 设置超时时间, 个性化密钥
         TsrRightClient orderClient = new TsrRightClient();
-        //泳道请求头
-        //orderClient.addHeader("tversion", "rights-refund");
         //组装业务请求参数
         RightsRejectOpenApiRequest request = getRightRequest();
         //发起调用
@@ -44,7 +42,6 @@ public class RightRefundRejectDemo {
     private static RightsRejectOpenApiRequest getRightRequest() {
         RightsRejectOpenApiRequest request = new RightsRejectOpenApiRequest();
         request.setRightsNo("278041434733543746");
-        request.setSaasId(70000001L);
         request.setRejectReason("不想退");
 
         return request;

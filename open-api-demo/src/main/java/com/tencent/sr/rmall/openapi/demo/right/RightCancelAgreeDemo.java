@@ -30,9 +30,7 @@ public class RightCancelAgreeDemo {
 
     private static RightsCheckOpenApiRequest getRightReturnOpenApiRequest() {
         RightsCheckOpenApiRequest request = new RightsCheckOpenApiRequest();
-        request.setSaasId(70000001L);
         request.setRightsNo("288525710503579265");
-//        request.setStoreId(70000001L);
         return request;
 
     }
