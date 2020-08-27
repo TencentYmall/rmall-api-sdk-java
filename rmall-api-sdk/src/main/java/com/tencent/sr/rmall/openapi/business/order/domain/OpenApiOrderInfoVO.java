@@ -60,4 +60,7 @@ public class OpenApiOrderInfoVO {
 
 //        "支付时间，最后更新时间，取消订单时间"
 
+    @ApiModelProperty(value = "下单人q享号信息",required = false)
+    private Long userVshareId;
+
 }
