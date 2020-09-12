@@ -19,7 +19,6 @@ import com.tencent.sr.rmall.openapi.base.BaseApiClient;
 import com.tencent.sr.rmall.openapi.business.order.request.OpenApiFinishDeliveryRequest;
 import com.tencent.sr.rmall.openapi.business.order.request.OpenApiSearchOrderListRequest;
 import com.tencent.sr.rmall.openapi.business.order.request.TsrOrderRequest;
-import com.tencent.sr.rmall.openapi.business.order.response.DeliveryResponse;
 import com.tencent.sr.rmall.openapi.business.order.response.OpenApiHistoryOrderListResponse;
 import com.tencent.sr.rmall.openapi.business.order.response.OpenApiOrderListResponse;
 import com.tencent.sr.rmall.openapi.business.order.response.TsrOrderResponse;
@@ -72,6 +71,18 @@ public class TsrOrderClient extends BaseApiClient {
     @ApiMapping(url = "/api/v1/openapi/order/searchOrderList")
     public HttpResult<OpenApiOrderListResponse> searchOrderList(OpenApiSearchOrderListRequest orderRequest) throws TsrSdkException {
         return doRequest(orderRequest, OpenApiOrderListResponse.class);
+    }
+
+    /**
+     * 获取历史订单数据
+     *
+     * @param orderRequest
+     * @return
+     * @throws TsrSdkException
+     */
+    @ApiMapping(url = "/api/v2/openapi/order/searchOrderAll")
+    public HttpResult<OpenApiHistoryOrderListResponse> searchOrderV2All(OpenApiSearchOrderListRequest orderRequest) throws TsrSdkException {
+        return doRequest(orderRequest, OpenApiHistoryOrderListResponse.class);
     }
 
 

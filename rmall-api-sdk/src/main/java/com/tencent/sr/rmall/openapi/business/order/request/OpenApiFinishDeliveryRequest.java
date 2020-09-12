@@ -17,13 +17,20 @@ public class OpenApiFinishDeliveryRequest extends BaseApiRequest implements Seri
     private int saasId;
 
     @Data
-    public static class DeliveryParameter{
+    public static class DeliveryParameter {
 
         /**
          * 订单号
          */
         @ApiModelProperty(value = "订单号", required = true)
         private String orderNo;
+
+        /**
+         * 配送类型
+         */
+        @ApiModelProperty(value = "配送类型 0无需物流， 1快递配送", required = true)
+        private Integer logisticsType;
+
         /**
          * 是否分包裹发货
          */

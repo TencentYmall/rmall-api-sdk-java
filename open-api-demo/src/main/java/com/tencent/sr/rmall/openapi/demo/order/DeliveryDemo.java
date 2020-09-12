@@ -41,6 +41,7 @@ public class DeliveryDemo {
         parameter.setLogisticsInfos(Arrays.asList(logisticsInfoVO));
         logisticsInfoVO.setLogisticsCompanyCode("zhongtong");
         logisticsInfoVO.setLogisticsCompanyName("中通快递");
+        logisticsInfoVO.setLogisticsNo("1111111");
 
         //发起远程调用
         HttpResult<Boolean> response = orderClient.finishDelivery(deliveryRequest);
