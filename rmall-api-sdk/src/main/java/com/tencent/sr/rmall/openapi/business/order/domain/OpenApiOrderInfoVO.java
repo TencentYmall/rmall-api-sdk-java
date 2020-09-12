@@ -62,5 +62,7 @@ public class OpenApiOrderInfoVO {
 
     @ApiModelProperty(value = "下单人q享号信息",required = false)
     private Long userVshareId;
+    @ApiModelProperty(value = "下单人手机号信息",required = false)
+    private String userPhone;
 
 }
