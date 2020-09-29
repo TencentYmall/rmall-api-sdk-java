@@ -30,7 +30,7 @@ public class OrderDetailV2List {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setOperationTimeInterval(new Long[]{1596633377000L,1596633377000L});
+        parameter.setOperationTimeInterval(new Long[]{1601199390000L,1601199390005L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
         request.setParameter(parameter);

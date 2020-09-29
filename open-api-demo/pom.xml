@@ -7,7 +7,7 @@
     <parent>
         <artifactId>open-api-sdk</artifactId>
         <groupId>com.tencent.sr.rmall</groupId>
-        <version>1.0.2.2.RELEASE</version>
+        <version>1.0.6.1.RELEASE</version>
     </parent>
 
     <artifactId>open-api-demo</artifactId>
@@ -16,7 +16,7 @@
         <dependency>
             <groupId>com.tencent.sr.rmall</groupId>
             <artifactId>rmall-api-sdk</artifactId>
-            <version>1.0.5.RELEASE</version>
+            <version>1.0.6.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

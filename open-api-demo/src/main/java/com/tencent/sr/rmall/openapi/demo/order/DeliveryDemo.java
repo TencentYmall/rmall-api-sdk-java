@@ -36,7 +36,7 @@ public class DeliveryDemo {
         OpenApiFinishDeliveryRequest.DeliveryParameter parameter = new OpenApiFinishDeliveryRequest.DeliveryParameter();
         deliveryRequest.setParameter(parameter);
         parameter.setIsBreak(false);
-        parameter.setOrderNo("264115470218702393");
+        parameter.setOrderNo("336533218911675813");
         OpenApiLogisticsInfoVO logisticsInfoVO = new OpenApiLogisticsInfoVO();
         parameter.setLogisticsInfos(Arrays.asList(logisticsInfoVO));
         logisticsInfoVO.setLogisticsCompanyCode("zhongtong");

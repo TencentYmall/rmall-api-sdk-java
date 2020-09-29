@@ -65,4 +65,16 @@ public class OpenApiOrderInfoVO {
     @ApiModelProperty(value = "下单人手机号信息",required = false)
     private String userPhone;
 
+    @ApiModelProperty(value = "主播名称",required = false)
+    private String anchorName;
+
+    @ApiModelProperty(value = "主播手机号",required = false)
+    private String anchorMobile;
+
+    @ApiModelProperty(value = "直播间id",required = false)
+    private String roomId;
+
+    @ApiModelProperty(value = "直播间名称",required = false)
+    private String roomName;
+
 }

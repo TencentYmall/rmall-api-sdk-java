@@ -7,16 +7,12 @@ package com.tencent.sr.rmall.openapi.demo.order;
  * @date 2020/7/17
  */
 
-import com.google.gson.JsonObject;
 import com.tencent.sr.rmall.openapi.business.order.TsrOrderClient;
 import com.tencent.sr.rmall.openapi.business.order.request.TsrOrderRequest;
 import com.tencent.sr.rmall.openapi.business.order.response.TsrOrderResponse;
 import com.tencent.sr.rmall.openapi.demo.InitUtil;
 import com.tencent.sr.rmall.openapi.exception.TsrSdkException;
 import com.tencent.sr.rmall.openapi.http.HttpResult;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author effortjiang
@@ -47,7 +43,7 @@ public class OrderDetailDemo {
     private static TsrOrderRequest getTsrOrderRequest() {
         TsrOrderRequest request = new TsrOrderRequest();
         TsrOrderRequest.ParameterBean parameterBean = new TsrOrderRequest.ParameterBean();
-        parameterBean.setOrderNo("298670031782161203");
+        parameterBean.setOrderNo("336533218911675813");
         request.setParameter(parameterBean);
         return request;
     }

@@ -1,15 +1,12 @@
 package com.tencent.sr.rmall.openapi.demo.order;
 
 import com.google.gson.Gson;
-import com.tencent.sr.rmall.openapi.business.TsrClient;
 import com.tencent.sr.rmall.openapi.business.order.TsrOrderClient;
 import com.tencent.sr.rmall.openapi.business.order.request.OpenApiSearchOrderListRequest;
-import com.tencent.sr.rmall.openapi.business.order.response.OpenApiHistoryOrderListResponse;
 import com.tencent.sr.rmall.openapi.business.order.response.OpenApiOrderListResponse;
 import com.tencent.sr.rmall.openapi.demo.InitUtil;
 import com.tencent.sr.rmall.openapi.exception.TsrSdkException;
 import com.tencent.sr.rmall.openapi.http.HttpResult;
-import com.tencent.sr.rmall.openapi.secure.Credential;
 
 public class OrderDetailList {
 
@@ -25,7 +22,7 @@ public class OrderDetailList {
         //查询全量
         OpenApiSearchOrderListRequest request =  getOrderAll();
 
-        HttpResult<OpenApiOrderListResponse> openApiHistoryOrderListResponse = orderClient.searchOrderList(request);
+        HttpResult<OpenApiOrderListResponse> openApiHistoryOrderListResponse = orderClient.searchOrderV2List(request);
         System.out.println(new Gson().toJson(openApiHistoryOrderListResponse));
         System.out.println(openApiHistoryOrderListResponse.getRequestId());
     }
@@ -33,7 +30,8 @@ public class OrderDetailList {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setCreateTimeInterval(new Long[]{1596633377000L,1596633377000L});
+//        parameter.setCreateTimeInterval(new Long[]{1596633377000L,1596633377000L});
+        parameter.setOperationTimeInterval(new Long[]{1601364528695L,1601364528696L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
         request.setParameter(parameter);

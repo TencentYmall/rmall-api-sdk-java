@@ -32,7 +32,7 @@ import org.slf4j.LoggerFactory;
  * @author effortjiang
  * @date 2020-07-15
  */
-@ApiMapping(url = "/api/v1/openapi/order")
+@ApiMapping(url = "/openapi-trade-order")
 public class TsrOrderClient extends BaseApiClient {
 
     private static final Logger log = LoggerFactory.getLogger(TsrOrderClient.class);

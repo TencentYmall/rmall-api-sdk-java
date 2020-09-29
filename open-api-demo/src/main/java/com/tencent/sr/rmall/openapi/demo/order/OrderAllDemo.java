@@ -20,7 +20,7 @@ public class OrderAllDemo {
         //查询全量
         OpenApiSearchOrderListRequest request1 = getOrderAll();
 
-        HttpResult<OpenApiHistoryOrderListResponse> openApiHistoryOrderListResponse = orderClient.searchOrderAll(request1);
+        HttpResult<OpenApiHistoryOrderListResponse> openApiHistoryOrderListResponse = orderClient.searchOrderV2All(request1);
         System.out.println(openApiHistoryOrderListResponse);
         System.out.println(openApiHistoryOrderListResponse.getRequestId());
     }
@@ -28,7 +28,8 @@ public class OrderAllDemo {
     private static OpenApiSearchOrderListRequest getOrderAll() {
         OpenApiSearchOrderListRequest request = new OpenApiSearchOrderListRequest();
         OpenApiSearchOrderListRequest.Parameter parameter = new OpenApiSearchOrderListRequest.Parameter();
-        parameter.setCreateTimeInterval(new Long[]{1596342808000L, 1597466008000L});
+//        parameter.setCreateTimeInterval(new Long[]{1596342808000L, 1597466008000L});
+        parameter.setOperationTimeInterval(new Long[]{1601360157678L, 1601360157679L});
         parameter.setPageNum(1);
         parameter.setPageSize(10);
         request.setParameter(parameter);
