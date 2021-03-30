@@ -25,8 +25,8 @@ public class InitUtil {
     public static Credential init() {
         //全局初始化密钥  如果应用密钥唯一 初始化一次即可
         //q享qa环境密钥demo
-        String secretId = "AKID90vucF6VqlGb3jeC6tnw3z09Uvskoec7u2ol";
-        String secretKey = "1uq5p8V8zeH2pBse91ip8ix2FEt7864i2qa9dxIz";
+        String secretId = "";
+        String secretKey = "";
         Credential credential = new Credential(secretId, secretKey);
         return credential;
     }
